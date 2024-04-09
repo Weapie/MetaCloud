@@ -6,6 +6,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.UUID;
 
 public class UUIDDriver {
 
@@ -31,15 +32,12 @@ public class UUIDDriver {
                         builder.append(line);
                     }
                     JSONObject json = new JSONObject(builder.toString());
-                    String uuid = "" + json.getLong("xuid");
-                    uuids.add(new UUIDStorage(userName, uuid));
-
-                    System.out.println(uuids.toString());
-                    System.out.println(uuid);
+                    String floodgateUUID = new UUID(0, json.getLong("xuid")).toString();
+                    uuids.add(new UUIDStorage(userName, floodgateUUID));
 
                     reader.close();
 
-                    return uuid;
+                    return floodgateUUID;
                 } catch (Exception e) {
                     return null;
                 }
