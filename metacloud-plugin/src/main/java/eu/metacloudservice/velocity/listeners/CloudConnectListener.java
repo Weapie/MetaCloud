@@ -21,12 +21,11 @@ import eu.metacloudservice.velocity.VelocityBootstrap;
 import net.kyori.adventure.text.Component;
 
 import java.util.ArrayList;
-import java.util.UUID;
 
 public class CloudConnectListener {
 
 
-    private final ArrayList<UUID> connected = new ArrayList<>();
+    private final ArrayList<String> connected = new ArrayList<>();
     private final ProxyServer server;
     public ServerInfo target;
 
@@ -61,7 +60,6 @@ public class CloudConnectListener {
             event.getPlayer().disconnect(Component.text(CloudAPI.getInstance().getMessages().getMessages().get("kickAlreadyOnNetwork").replace("&", "§")));
         }
 
-        this.connected.add(event.getPlayer().getUniqueId());
         CloudAPI.getInstance().sendPacketSynchronized(new PacketInPlayerConnect(event.getPlayer().getUsername(), service.getService()));
 
         if (group.isMaintenance()) {

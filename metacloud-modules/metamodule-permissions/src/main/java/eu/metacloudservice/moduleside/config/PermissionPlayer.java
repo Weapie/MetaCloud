@@ -4,7 +4,6 @@
 
 package eu.metacloudservice.moduleside.config;
 
-import eu.metacloudservice.storage.UUIDDriver;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
@@ -22,6 +21,5 @@ public class PermissionPlayer {
     private ArrayList<PermissionAble> permissions = new ArrayList<>();
 
     public PermissionPlayer(){}
-
 
 }

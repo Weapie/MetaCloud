@@ -1,19 +1,11 @@
 package eu.metacloudservice.storage;
 
-import com.google.gson.JsonObject;
-import com.google.gson.JsonParser;
-import lombok.SneakyThrows;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.HashMap;
 
 public class UUIDDriver {
 
@@ -24,7 +16,35 @@ public class UUIDDriver {
         }
         if (uuids.stream().anyMatch(uuidStorage -> uuidStorage.getUsername().equalsIgnoreCase(name))){
             return uuids.stream().filter(uuidStorage -> uuidStorage.getUsername().equalsIgnoreCase(name)).findFirst().get().getUniqueID();
-        }else {
+        } else {
+            System.out.println(name);
+            if(name.startsWith("!")) {
+                String userName = name.replaceFirst("!", "");
+                String geyserXid = "https://api.geysermc.org/v2/xbox/xuid/" + userName;
+
+                try {
+                    URL url = new URL(geyserXid);
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
+                    StringBuilder builder = new StringBuilder();
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        builder.append(line);
+                    }
+                    JSONObject json = new JSONObject(builder.toString());
+                    String uuid = "" + json.getLong("xuid");
+                    uuids.add(new UUIDStorage(userName, uuid));
+
+                    System.out.println(uuids.toString());
+                    System.out.println(uuid);
+
+                    reader.close();
+
+                    return uuid;
+                } catch (Exception e) {
+                    return null;
+                }
+            }
+
             String urlString = "https://minecraft-api.com/api/uuid/" + name + "/json";
             try {
                 URL url = new URL(urlString);
@@ -41,7 +61,7 @@ public class UUIDDriver {
                 reader.close();
 
                 return uuid;
-            } catch (Exception e) {
+            } catch (Exception e1) {
                 try {
                     URL url = new URL("https://api.minetools.eu/uuid/" + name);
                     BufferedReader reader = new BufferedReader(new InputStreamReader(url.openStream()));
@@ -94,8 +114,7 @@ public class UUIDDriver {
 
 
     public static String getUsername(String uuid) {
-
-        if (uuids == null){
+        if (uuids == null) {
             uuids = new ArrayList<>();
         }
 

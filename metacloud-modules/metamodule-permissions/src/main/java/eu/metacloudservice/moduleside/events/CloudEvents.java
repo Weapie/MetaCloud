@@ -33,12 +33,9 @@ public class CloudEvents implements ICloudListener {
 
     @Subscribe(priority = Priority.HIGHEST)
     public void handelConnect(CloudPlayerConnectedEvent event){
-
         Configuration config = (Configuration) new ConfigDriver("./modules/permissions/config.json").read(Configuration.class);
 
         if (config.getPlayers().stream().noneMatch(permissionPlayer -> permissionPlayer.getUuid().equalsIgnoreCase(event.getUniqueId()))){
-
-
             ArrayList<IncludedAble> ables = new ArrayList<>();
             config.getGroups().stream().filter(PermissionGroup::getIsDefault).toList().forEach(permissionGroup -> ables.add(new IncludedAble(permissionGroup.getGroup(), "LIFETIME")));
 

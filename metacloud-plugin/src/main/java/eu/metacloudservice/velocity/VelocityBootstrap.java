@@ -27,7 +27,6 @@ import net.kyori.adventure.text.Component;
 import org.slf4j.Logger;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 @Plugin(id = "metacloudplugin", name = "metacloud-plugin", version = "1.0.9-RELEASE", authors = "RauchigesEtwas", dependencies = {@Dependency(id = "metacloudapi")})
 public class VelocityBootstrap {
@@ -39,8 +38,6 @@ public class VelocityBootstrap {
     public VelocityBootstrap(ProxyServer proxyServer, Logger logger) {
         VelocityBootstrap.proxyServer = proxyServer;
         this.logger = logger;
-
-
     }
 
     @Subscribe
