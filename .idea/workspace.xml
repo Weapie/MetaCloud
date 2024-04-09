@@ -6,7 +6,21 @@
   <component name="ChangeListManager">
     <list default="true" id="9c64d84d-69de-4a92-8ef4-8136674adb0d" name="Changes" comment="Try to code cloud to badrock compatibility">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/metacloud-driver/src/main/java/eu/metacloudservice/storage/UUIDDriver.java" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-driver/src/main/java/eu/metacloudservice/storage/UUIDDriver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-api/src/main/resources/bungee.yml" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-api/src/main/resources/bungee.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-api/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-api/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-launcher/src/main/java/eu/metacloudservice/CloudBoot.java" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-launcher/src/main/java/eu/metacloudservice/CloudBoot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-modules/metamodule-cloudflare/src/main/resources/module.properties" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-modules/metamodule-cloudflare/src/main/resources/module.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-modules/metamodule-notify/src/main/resources/module.properties" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-modules/metamodule-notify/src/main/resources/module.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-modules/metamodule-notify/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-modules/metamodule-notify/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-modules/metamodule-permissions/src/main/resources/bungee.yml" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-modules/metamodule-permissions/src/main/resources/bungee.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-modules/metamodule-permissions/src/main/resources/module.properties" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-modules/metamodule-permissions/src/main/resources/module.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-modules/metamodule-permissions/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-modules/metamodule-permissions/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-modules/metamodule-signs/src/main/resources/module.properties" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-modules/metamodule-signs/src/main/resources/module.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-modules/metamodule-signs/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-modules/metamodule-signs/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-modules/metamodule-syncproxy/src/main/resources/module.properties" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-modules/metamodule-syncproxy/src/main/resources/module.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-modules/metamodule-syncproxy/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-modules/metamodule-syncproxy/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-plugin/src/main/resources/bungee.yml" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-plugin/src/main/resources/bungee.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/metacloud-plugin/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/metacloud-plugin/src/main/resources/plugin.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1712696824388</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Try to code cloud to badrock compatibility">
+      <option name="closed" value="true" />
+      <created>1712697271649</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1712697271649</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

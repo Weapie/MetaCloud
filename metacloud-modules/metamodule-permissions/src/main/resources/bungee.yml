@@ -1,6 +1,6 @@
 main: eu.metacloudservice.bungee.BungeeBootstrap
 version: 1.0.9-RELEASE
-author: RauchigesEtwas
-name: metacloud-permissions
+author: Weapie
+name: weapie-permissions
 
-depend: ["metacloud-api", "metacloud-plugin"]
+depend: ["weapie-api", "weapie-plugin"]
